@@ -40,25 +40,33 @@
                     </a></span>
             </div>
         </div>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item">
-                    <a class="nav-link link text-white display-4" href="single.html">
-                        <span class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>
-                        Services
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+                        
+                        <?php wp_nav_menu( array(
+                            'theme_location'  => 'HeaderNavbar',
+                            'menu'            => '',
+                            'container'       => 'div',
+                            'container_class' => 'menu-{menu-slug}-container',
+                            'container_id'    => '',
+                            'menu_class'      => 'menu',
+                            'menu_id'         => '',
+                            'echo'            => true,
+                            'fallback_cb'     => 'wp_page_menu',
+                            'before'          => '',
+                            'after'           => '',
+                            'link_before'     => '',
+                            'link_after'      => '',
+                            'items_wrap'      => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
+                            'depth'           => 0,
+                            'walker'          => '',
+                        ) );
+                        ?>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link link text-white display-4" href="page1.html">
-                        <span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span>
-                        About Us
-                    </a>
-                </li></ul>
-            <div class="navbar-buttons mbr-section-btn">
-                <a class="btn btn-sm btn-primary display-4" href="<?php echo site_url( '/about-us' ) ?>">
-                    <span class="mbri-save mbr-iconfont mbr-iconfont-btn "></span>
-                    Try It Now!
-                </a>
-            </div>
+            </ul>            
         </div>
     </nav>
 </section>

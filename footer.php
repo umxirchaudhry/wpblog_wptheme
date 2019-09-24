@@ -28,7 +28,7 @@
                     <hr>
                 </div>
             </div>
-            <div class="media-container-row mbr-white">
+            <div class="media-container-row text-white">
                 <div class="col-md-6 copyright">
                     <p class="mbr-text mbr-fonts-style display-7">
                         © Copyright 2019 Mobirise - All Rights Reserved
@@ -38,7 +38,7 @@
                     <div class="social-list align-right">
                         <div class="soc-item">
                             <a href="https://twitter.com/mobirise" target="_blank">
-                                <span class="socicon-twitter socicon mbr-iconfont mbr-iconfont-social"></span>
+                                <span class="socicon-twitter socicon mbr-iconfont mbr-iconfont-social"></span>  
                             </a>
                         </div>
                         <div class="soc-item">
@@ -72,18 +72,6 @@
         </div>
     </div>
 </section>
-
-
-<!--   <script src="assets/web/assets/jquery/jquery.min.js"></script>
-  <script src="assets/popper/popper.min.js"></script>
-  <script src="assets/tether/tether.min.js"></script>
-  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-  <script src="assets/dropdown/js/nav-dropdown.js"></script>
-  <script src="assets/dropdown/js/navbar-dropdown.js"></script>
-  <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
-  <script src="assets/parallax/jarallax.min.js"></script>
-  <script src="assets/smoothscroll/smooth-scroll.js"></script>
-  <script src="assets/theme/js/script.js"></script> -->
 
 <?php wp_footer(); ?>  
   

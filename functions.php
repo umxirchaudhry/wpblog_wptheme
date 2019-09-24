@@ -4,7 +4,7 @@
 //Theme Files Start
 function clean_files() {
 	// wp_enqueue_style( 'Custom-Google-Font', '' );
-	// wp_enqueue_script( 'font-awesome', '//kit.fontawesome.com/a3112015b5.js' );
+	
 	
 
 	//CSS Files
@@ -30,6 +30,7 @@ function clean_files() {
 	wp_enqueue_script( 'Js8', get_template_directory_uri() . '/assets/parallax/jarallax.min.js', Null, 1.0, True);
 	wp_enqueue_script( 'Js9', get_template_directory_uri() . '/assets/smoothscroll/smooth-scroll.js', Null, 1.0, True);
 	wp_enqueue_script( 'Js10', get_template_directory_uri() . '/assets/theme/js/script.js', Null, 1.0, True);
+	wp_enqueue_script( 'font-awesome', '//use.fontawesome.com/6be1eba4d6.js', Null, 1.0, True );
 }
 
 add_action('wp_enqueue_scripts', 'clean_files' );
@@ -39,6 +40,7 @@ add_action('wp_enqueue_scripts', 'clean_files' );
 //Theme Features Start
 function clean_features () {
 	add_theme_support( 'title-tag' );
+	register_nav_menus( 'HeaderNavbar', 'Navbar Location' );
 
 }
 

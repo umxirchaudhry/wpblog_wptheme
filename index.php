@@ -74,15 +74,11 @@
     <?php } ?>
 </section>
 
-<div class="cpontainer">
-    <div class="row text-center py-2">
-        <div class="col">
-            <button class="btn btn-xs"><?php  echo paginate_links( ) ?></button>
-            
-        </div>
+<div class="row text-center py-2 pb-3">
+    <div class="col">
+<?php  echo paginate_links( ); ?>
     </div>
 </div>
-
 
 <?php get_footer(); ?>
   
