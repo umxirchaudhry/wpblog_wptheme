@@ -2,11 +2,9 @@
 
 
 //Theme Files Start
-function clean_files() {
+function wp_blog_files() {
 	// wp_enqueue_style( 'Custom-Google-Font', '' );
 	
-	
-
 	//CSS Files
 	wp_enqueue_style( 'theme_main_css', 'get_stylesheet_uri()');
 	wp_enqueue_style( 'css1', get_template_directory_uri() . '/assets/web/assets/mobirise-icons/mobirise-icons.css' );
@@ -33,18 +31,30 @@ function clean_files() {
 	wp_enqueue_script( 'font-awesome', '//use.fontawesome.com/6be1eba4d6.js', Null, 1.0, True );
 }
 
-add_action('wp_enqueue_scripts', 'clean_files' );
-//Theme Files Ends
+add_action('wp_enqueue_scripts', 'wp_blog_files' );
 
 
 //Theme Features Start
-function clean_features () {
+function wp_blog_features () {
+
+	register_nav_menus( array(
+    'primary'   => __( 'Primary Menu', 'wp_blog' ),
+    'secondary' => __( 'Secondary Menu', 'wp_blog' )
+	) );
+
+
 	add_theme_support( 'title-tag' );
-	register_nav_menus( 'HeaderNavbar', 'Navbar Location' );
+	add_theme_support( 'post-thumbnails' );
+	add_theme_support( 'custom-logo' );
 
 }
 
-add_action('after_setup_theme', 'clean_features' );
-//Theme Features Ends
+add_action('after_setup_theme', 'wp_blog_features' );
+
+
+// Register Custom Navigation Walker
+require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+
+
 
 ?>

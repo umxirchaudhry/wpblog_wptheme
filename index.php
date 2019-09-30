@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+<section><!--Hero Section-->
     <div class="mbr-overlay" style="opacity: 0.6; background-color: rgb(20, 157, 204);">
     </div>
 
@@ -10,49 +11,18 @@
                     FULL WIDTH INTRO
                 </h1>
                 <h3 class="mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style display-2">
-                    Beautiful mobile websites
+                    Some Description
                 </h3>
                 <p class="mbr-text align-center pb-3 mbr-fonts-style display-5">
-                    Full width intro with adjustable height, background image and a color overlay. Click any text to edit or style it.
+                    Little More Description
                 </p>
-                <div class="mbr-section-btn align-center"><a class="btn btn-md btn-secondary display-4" href="https://mobirise.co">
-                        <span class="mbr-iconfont mbri-file"></span>LEARN MORE</a></div>
             </div>
         </div>
     </div>
 
 </section>
 
-<section class="mbr-section info2 cid-rCUEgVFpI9" id="info2-4">
-
-    
-
-    
-
-    <div class="container">
-        <div class="row main justify-content-center">
-            <div class="media-container-column col-12 col-lg-3 col-md-4">
-                <div class="mbr-section-btn align-left py-4">
-                    <a class="btn btn-primary display-4" href="https://mobirise.co">
-                    <span class="mbri-preview mbr-iconfont"></span>
-                    SEE MORE
-                    </a>
-                </div>
-            </div>
-            <div class="media-container-column title col-12 col-lg-7 col-md-6">
-                <h2 class="align-right mbr-bold mbr-white pb-3 mbr-fonts-style display-2">
-                    GRADIENT BACKGROUND
-                </h2>
-                <h3 class="mbr-section-subtitle align-right mbr-light mbr-white mbr-fonts-style display-5">
-                    Info block with gradient. Text is aligned to right.
-                </h3>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section>
+<section><!--Main-->
     
         <?php while (have_posts()) {
                         the_post(); ?>
@@ -74,11 +44,15 @@
     <?php } ?>
 </section>
 
-<div class="row text-center py-2 pb-3">
-    <div class="col">
-<?php  echo paginate_links( ); ?>
+<section><!--Pagination-->
+    <div class="row text-center py-2 pb-3">
+        <div class="col">
+            <?php  echo paginate_links( ); ?>
+        </div>
     </div>
-</div>
+</section>
+
+
 
 <?php get_footer(); ?>
   

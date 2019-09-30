@@ -1,4 +1,4 @@
-<section class="cid-rCUEAgOIA1" id="footer5-5">
+<section class="cid-rCUEAgOIA1 bg-light" id="footer5-5">
 
     
 
@@ -9,19 +9,47 @@
             <div class="col-md-3">
                 <div class="media-wrap">
                     <a href="https://mobirise.co/">
-                       <img src="<?php echo get_theme_file_uri( '/assets/images/logo2.png' ); ?>" alt="Mobirise">
+                        <?php if ( function_exists( 'the_custom_logo' ) ) {
+                                    the_custom_logo();
+                                } ?>
                     </a>
                 </div>
             </div>
             <div class="col-md-9">
-                <p class="mbr-text align-right links mbr-fonts-style display-7">
-                    <a href="#" class="text-black">ABOUT</a> &nbsp;&nbsp;&nbsp;&nbsp;
+                <p class="mbr-text align-right links mbr-fonts-style display-7 ml-auto">
+                    <?php wp_nav_menu( array(
+                        'theme_location'  => 'secondary',
+                        'menu'            => '',
+                        'container'       => 'div',
+                        'container_class' => 'menu-{menu-slug}-container',
+                        'container_id'    => '',
+                        'menu_class'      => 'menu',
+                        'menu_id'         => '',
+                        'echo'            => true,
+                        'fallback_cb'     => 'wp_page_menu',
+                        'before'          => '',
+                        'after'           => '',
+                        'link_before'     => '',
+                        'link_after'      => '',
+                        'items_wrap'      => '<ul id = "%1$s" class = "%2$s">%3$s</ul>',
+                        'depth'           => 0,
+                        'walker'          => '',
+                    ) );
+
+                    ?>
+
+
+
+
+                    <!-- <a href="#" class="text-black">ABOUT</a> &nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="#" class="text-black">TERMS</a> &nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="#" class="text-black">CAREERS</a> &nbsp;&nbsp;&nbsp;&nbsp;
-                    <a href="#" class="text-black">CONTACT</a>
+                    <a href="#" class="text-black">CONTACT</a> -->
                 </p>
             </div>
         </div>
+
+        
         <div class="footer-lower">
             <div class="media-container-row">
                 <div class="col-md-12">
